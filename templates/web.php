@@ -10,7 +10,7 @@
 <body>
     <div class="wrapper">
         <div class="container">
-            <h1>Server vars</h1>
+            <h1 class="text-center my-5">Server vars</h1>
             <?php require( dirname( __FILE__ ) . '/../inc/server-vars-html-table.php' ); ?>
         </div>
     </div>
