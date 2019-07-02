@@ -5,24 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Reserved server vars</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
     <div class="wrapper">
-    <?php 
-        echo '<table cellpadding="10">' ; 
-        foreach($_SERVER as $paramName => $varServer) {
-            if (isset($_SERVER[$paramName])) { 
-                ob_start();
-                var_dump($varServer);
-                $varDump = ob_get_clean();
-                echo '<tr><td>'.$paramName.'</td><td>'.$varDump.'</td></tr>' ; 
-            } 
-            else { 
-                echo '<tr><td>'.$paramName.'</td><td>-</td></tr>' ; 
-            } 
-        } 
-        echo '</table>';
-    ?>
+        <div class="container">
+            <?php require( __DIR__ . '/inc/server_vars_table.php' ); ?>
+        </div>
     </div>
 </body>
 </html>
